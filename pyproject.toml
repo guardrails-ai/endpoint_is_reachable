@@ -1,7 +1,7 @@
 [project]
-name = "regexmatch"
+name = "endpoint_is_reachable"
 version = "0.0.0"
-description = "Template repo for Guardrails Hub validators."
+description = "Validates that a value is a reachable URL."
 authors = [
     {name = "Guardrails AI", email = "contact@guardrailsai.com"}
 ]

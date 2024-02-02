@@ -1,3 +1,3 @@
-from .main import RegexMatch
+from .main import EndpointIsReachable
 
-__all__ = ["RegexMatch"]
+__all__ = ["EndpointIsReachable"]
