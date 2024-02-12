@@ -55,10 +55,10 @@ val = EndpointIsReachable(on_fail="noop")
 
 # Create Pydantic BaseModel
 class PaperCitations(BaseModel):
-		paper_name: str
-		paper_url: str = Field(
-				description="URL at which to find paper", validators=[val]
-		)
+    paper_name: str
+    paper_url: str = Field(
+        description="URL at which to find paper", validators=[val]
+    )
 
 # Create a Guard to check for valid Pydantic output
 guard = Guard.from_pydantic(output_class=PetInfo)
@@ -66,8 +66,8 @@ guard = Guard.from_pydantic(output_class=PetInfo)
 # Run LLM output generating JSON through guard
 guard.parse("""
 {
-		"paper_name": "Attention Is All You Need",
-		"paper_url": "https://arxiv.org/abs/1706.03762"
+    "paper_name": "Attention Is All You Need",
+    "paper_url": "https://arxiv.org/abs/1706.03762"
 }
 """)
 ```
