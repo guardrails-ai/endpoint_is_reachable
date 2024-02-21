@@ -16,11 +16,11 @@ class EndpointIsReachable(Validator):
 
     **Key Properties**
 
-    | Property                      | Description                       |
-    | ----------------------------- | --------------------------------- |
-    | Name for `format` attribute   | `is-reachable`                    |
-    | Supported data types          | `string`,                         |
-    | Programmatic fix              | None                              |
+    | Property                      | Description                           |
+    | ----------------------------- | ------------------------------------- |
+    | Name for `format` attribute   | `guardrails/endpoint_is_reachable`    |
+    | Supported data types          | `string`                             |
+    | Programmatic fix              | None                                  |
     """
 
     def validate(self, value: Any, metadata: Dict) -> ValidationResult:
