@@ -1,5 +1,5 @@
 from typing import Any, Dict
-
+from http import HTTPStatus
 from guardrails.logger import logger
 from guardrails.validator_base import (
     FailResult,
@@ -31,7 +31,7 @@ class EndpointIsReachable(Validator):
         # Check that the URL exists and can be reached
         try:
             response = requests.get(value)
-            if response.status_code != 200:
+            if response.status_code != HTTPStatus.OK:
                 return FailResult(
                     error_message=f"URL {value} returned "
                     f"status code {response.status_code}",
